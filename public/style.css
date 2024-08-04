@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 500px) {
+  body {
+    border: 2px solid black;
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+}
+nav {
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  height: 20vh;
+  width: 100%;
+  z-index: 10;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  width: 90%;
+  margin: auto;
+}
+.heading h1 {
+  color: rgb(8, 8, 155);
+}
+.content-in {
+  margin: auto;
+  position: relative;
+  width: 90%;
+  height: 50%;
+}
+.content-in input {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  z-index: 1;
+  border-radius: 40px;
+  border: 2px solid rgb(37, 36, 36);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(57, 56, 56);
+  padding-left: 10px;
+  padding-right: 90px;
+}
+.content-in button {
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  z-index: 5;
+  height: 41px;
+  width: 90px;
+  right: 2px;
+  top: 2px;
+  border-radius: 40px;
+  color: white;
+  background-color: rgb(217, 73, 21);
+}
+main {
+  min-height: 80vh;
+  width: 100%;
+  background-color: white;
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 100%;
+    min-height: 80vh;
+  }
+}
+.container {
+  overflow: auto;
+  min-height: 99%;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.content {
+  height: 40px;
+  width: 100%;
+  border-bottom: 2px solid rgb(237, 155, 72);
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  height: 40px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.para {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+.tog {
+  text-decoration: line-through;
+}
+.para p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.right {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+i:hover {
+  cursor: pointer;
+}
+.right i {
+  color: black;
+  font-size: 25px;
+}
+.right i:last-child {
+  font-size: 19px;
+}
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.custom-checkbox .checkmark {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: rgb(241, 116, 13);
+}
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+  display: block;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
